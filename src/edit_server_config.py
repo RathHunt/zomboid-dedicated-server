@@ -95,9 +95,8 @@ if __name__ == "__main__":
 
         if len(sys.argv) == 3:
             # Return the value of the given key
-            if 'ServerConfig' in config:
-                if key in config['ServerConfig']:
-                    print(f"{config['ServerConfig'][key]}")
+            if 'ServerConfig' in config and key in config['ServerConfig']:
+                print(f"{config['ServerConfig'][key]}")
         else:
             # Assign a new value
             value: str = sys.argv[3]
